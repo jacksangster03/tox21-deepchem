@@ -1,6 +1,6 @@
 # Molecular Toxicity Prediction with DeepChem
 
-Multi-task toxicity prediction on the **Tox21** dataset using DeepChem, built as part of my GSoC 2026 application for the [DeepChem](https://github.com/deepchem/deepchem) project.
+Multi-task toxicity prediction on the **Tox21** dataset using [DeepChem](https://github.com/deepchem/deepchem).
 
 ## Overview
 
