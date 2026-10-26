@@ -26,7 +26,7 @@ This notebook trains a `MultitaskClassifier` to predict 12 toxicity assay endpoi
 | Best assay | NR-AR-LBD (0.7982) |
 | Worst assay | NR-PPAR-gamma (0.5817) |
 
-The model correctly identifies known toxic compounds (Bisphenol A, DDT) as high-risk and common drugs (caffeine, aspirin) as low-risk, validating biological plausibility.
+The per-task Random Forest baseline slightly outperforms the multitask network (0.704 vs 0.693), so this notebook does not show a multi-task advantage; the explanatory text printed in the notebook's comparison cell claims one and should be disregarded. Training ROC-AUC reaches about 0.97 while validation peaks near 0.71 (epoch 15), so the network overfits. The sample predictions are a sanity check on eight well-known molecules (for example Bisphenol A scores 0.55 mean P(toxic), caffeine 0.03), not a validation of the model.
 
 ## Setup
 
@@ -36,6 +36,10 @@ Requires Python 3.11+.
 pip install -r requirements.txt
 jupyter notebook tox21_deepchem.ipynb
 ```
+
+## Reproducing
+
+Results come from the saved notebook outputs. Re-running retrains the network and downloads Tox21 through MoleculeNet, so exact numbers can differ slightly.
 
 ## Author
 
